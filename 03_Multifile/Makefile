@@ -47,11 +47,11 @@ test1:	prog prog-a prog-so
 	cmp prog-a_1.txt prog-so_1.txt || true
 
 test3:	prog prog-a prog-so
-		./prog a b c 2> prog_3.txt
-		./prog-a a b c 2> prog-a_3.txt
-		./prog-so a b c 2> prog-so_3.txt
-		cmp prog_1.txt prog-a_1.txt || true
-		cmp prog_1.txt prog-so_1.txt || true
-		cmp prog-a_1.txt prog-so_1.txt || true
+	./prog a b c 2> prog_3.txt
+	./prog-a a b c 2> prog-a_3.txt
+	./prog-so a b c 2> prog-so_3.txt
+	cmp prog_1.txt prog-a_1.txt || true
+	cmp prog_1.txt prog-so_1.txt || true
+	cmp prog-a_1.txt prog-so_1.txt || true
 
 test:	test0 test1 test3
